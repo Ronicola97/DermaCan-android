@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">DermaCan</string>
+
+    <string name="login">Iniciar Sesión</string>
+    <string name="plh_correo">Correo electrónico</string>
+    <string name="plh_clave">Contraseña</string>
+    <string name="lbl_recuperar">Olvidaste tu contraseña?</string>
+    <string name="lbl_crear_user">No tienes una cuenta? Registrate</string>
+    <string name="btn_ingresar">Ingresar</string>
+
+    <string name="user">Nuevo Usuario</string>
+    <string name="plh_cedula">Cédula</string>
+    <string name="plh_nombre">Nombres</string>
+    <string name="plh_apellido">Apellidos</string>
+    <string name="plh_celular">Celular</string>
+    <string name="plh_confirmclave">Repetir Contraseña</string>
+    <string name="btn_registrar">Registrarme</string>
+
+
+    <string name="title_activity_api_google_maps">API_GoogleMaps</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="descrip_sarna">Es una enfermedad causada por ácaros que viven en la piel de los animales. El ácaro responsable de esta enfermedad se denomina Sarcoptes Scabiei Var Canis.</string>
+    <string name="contagio_s_op1"> * Se transmite por contacto directo con otros animales.</string>
+    <string name="contagio_s_op2"> * Se transmite al entrar en contacto con objetos que pertenecen a otro animal contagiado y que no se han desinfectado correctamente.</string>
+    <string name="síntomas_s_op1"> * Picazón.</string>
+    <string name="síntomas_s_op2"> * Alopecia.</string>
+    <string name="síntomas_s_op3"> * Enrojecimiento de la piel.</string>
+    <string name="síntomas_s_op4"> * Costras.</string>
+    <string name="síntomas_s_op5"> * Piel gruesa.</string>
+    <string name="síntomas_s_op6"> * Mal olor.</string>
+    <string name="síntomas_s_op7"> * Pústulas.</string>
+
+    <string name="descrip_pulga">Cuando las pulgas pican a un perro, inyectan su saliva en la piel. El sistema inmunitario del animal reacciona a la saliva y produce anticuerpos. Los anticuerpos se unen a las proteínas de la saliva y desencadenan una reacción alérgica.</string>
+    <string name="contagio_p_op1"> * Se contraen cuando los perros salen a la calle, como las pulgas pueden saltar hasta 25cm pueden pegarse al animal.</string>
+    <string name="contagio_p_op2"> * Invanden ropa, muebles o alfombras y saltan al perro al entrar en contacto.</string>
+    <string name="síntomas_p_op1"> * Picazón.</string>
+    <string name="síntomas_p_op2"> * Alopecia.</string>
+    <string name="síntomas_p_op3"> * Enrojecimiento de la piel.</string>
+    <string name="síntomas_p_op4"> * Costras.</string>
+    <string name="síntomas_p_op5"> * Piel gruesa.</string>
+    <string name="síntomas_p_op6"> * Eritemas.</string>
+    <string name="síntomas_p_op7"> * Pústulas.</string>
+
+    <string name="descrip_otitis">La otitis externa es una infección o inflamación del oído externo de un animal que puede ser causada por bacterias u hongos.</string>
+    <string name="contagio_o_op1"> * Se puede contagiar por contacto directo con otros animales.</string>
+    <string name="contagio_o_op2"> * Los perros también pueden contraer otitis externa por la exposición a irritantes como pieles sintéticas, el agua o productos químicos.</string>
+    <string name="síntomas_o_op1"> * Picazón en las orejas.</string>
+    <string name="síntomas_o_op2"> * Sacudida de cabeza.</string>
+    <string name="síntomas_o_op3"> * Enrojecimiento del oido.</string>
+    <string name="síntomas_o_op4"> * Cerumen </string>
+    <string name="síntomas_o_op5"> * Alopecia en las orejas.</string>
+    <string name="síntomas_o_op6"> * Mal olor en las orejas.</string>
+    <string name="síntomas_o_op7"> * Piel gruesa.</string>
+
+
+    <string name="Pizacón">Picazón</string>
+    <string name="intensidad1">Leve</string>
+    <string name="intensidad2">Moderada</string>
+    <string name="intensidad3">Intensa</string>
+
+    <string name="Alopecia">Alopecia</string>
+
+    <string name="Enrojecimiento">Piel Enrojecida</string>
+
+    <string name="Olor">Mal olor</string>
+
+    <string name="Costras">Costras</string>
+    <string name="tamaño1">Pequeñas</string>
+    <string name="tamaño2">Medianas</string>
+    <string name="tamaño3">Grandes</string>
+
+    <string name="Grueso">Piel Gruesa</string>
+    <string name="grado1">Leve</string>
+    <string name="grado2">Pronunciada</string>
+    <string name="grado3">Grave</string>
+
+    <string name="Eritema">Eritema</string>
+    <string name="cant1">Poco</string>
+    <string name="cant2">Mucho</string>
+
+    <string name="Sacudida">Sacudida de Cabeza</string>
+    <string name="fuerza1">Leve</string>
+    <string name="fuerza2">Moderado</string>
+    <string name="fuerza3">Grave</string>
+
+    <string name="Cerumen">Cerumen en el oido</string>
+
+    <string name="Pustulas">Pústulas</string>
+    <string name="dimension1">Pequeñas</string>
+    <string name="dimension2">Grandes</string>
+
+    <string name="instrucciones">Marque la casilla correspondiente a cada sígno sintomatológico que puede observar en el cuerpo de su mascota.</string>
+
+</resources>

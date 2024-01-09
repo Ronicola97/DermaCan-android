@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyHorizontalScrollViewStyle">
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_horizontal</item>
+    </style>
+
+    <style name="MyVerticalScrollViewStyle">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_vertical</item>
+    </style>
+
+    <style name="CustomScrollBar">
+        <item name="android:color">@color/azul_oscuro</item> <!-- Color de la barra de desplazamiento -->
+    </style>
+
+
+</resources>

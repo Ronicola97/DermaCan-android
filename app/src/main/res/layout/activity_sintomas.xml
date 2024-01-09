@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/menu_background"
+    tools:context=".sintomas"
+    android:screenOrientation="portrait">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:background="@color/azul_oscuro"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="82dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="menu"
+                    app:srcCompat="@drawable/avatar" />
+
+                <LinearLayout
+                    android:id="@+id/pet1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/view_UserName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/vollkorn"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Análisis de signos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/icon_raza" />
+
+                        <Spinner
+                            android:id="@+id/mis_mascotas"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@color/white"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/black"
+                            android:fontFamily="@font/vollkorn" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="71dp"
+        style="@style/MyVerticalScrollViewStyle"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/instrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="21dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/testing_spin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:gravity="center"
+                            android:text="Instrucciones"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/vollkorn"
+                            android:gravity="center"
+                            android:text="@string/instrucciones"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="1"
+                android:columnOrderPreserved="false"
+                android:rowCount="3">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="21dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/enrojecido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:text="@string/Enrojecimiento" />
+
+                        <CheckBox
+                            android:id="@+id/olor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:text="@string/Olor" />
+
+                        <CheckBox
+                            android:id="@+id/ch_picazon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:onClick="validar_picazón"
+                            android:text="@string/Pizacón" />
+
+                        <RadioGroup
+                            android:id="@+id/grupo_picazon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="15dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rd_int1_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/intensidad1" />
+
+                            <RadioButton
+                                android:id="@+id/rd_int2_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/intensidad2" />
+
+                            <RadioButton
+                                android:id="@+id/rd_int3_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/intensidad3" />
+
+                        </RadioGroup>
+
+                        <CheckBox
+                            android:id="@+id/alopecia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:onClick="validar_alopecia"
+                            android:text="@string/Alopecia" />
+
+                        <LinearLayout
+                            android:id="@+id/grupo_alopecia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="15dp"
+                            android:orientation="horizontal">
+
+                            <GridLayout
+                                android:id="@+id/grid_alopecia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:alignmentMode="alignMargins"
+                                android:columnCount="3"
+                                android:columnOrderPreserved="false"
+                                android:rowCount="2">
+
+                                <CheckBox
+                                    android:id="@+id/alo_cabeza"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="cabeza" />
+
+                                <CheckBox
+                                    android:id="@+id/alo_oreja"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="orejas" />
+
+                                <CheckBox
+                                    android:id="@+id/alo_cuello"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="cuello" />
+
+                                <CheckBox
+                                    android:id="@+id/alo_lomo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="lomo" />
+
+                                <CheckBox
+                                    android:id="@+id/alo_extremidades"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="extremidades" />
+
+                                <CheckBox
+                                    android:id="@+id/alo_abdomen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="abdomen" />
+                            </GridLayout>
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/ch_costras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:onClick="validar_costras"
+                            android:text="@string/Costras" />
+
+                        <RadioGroup
+                            android:id="@+id/grupo_costras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="15dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rd_tam1_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/tamaño1" />
+
+                            <RadioButton
+                                android:id="@+id/rd_tam2_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/tamaño2" />
+
+                            <RadioButton
+                                android:id="@+id/rd_tam3_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/tamaño3" />
+
+                        </RadioGroup>
+
+                        <CheckBox
+                            android:id="@+id/ch_grueso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:onClick="validar_grueso"
+                            android:text="@string/Grueso" />
+
+                        <RadioGroup
+                            android:id="@+id/grupo_grueso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="15dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rd_grad1_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/grado1" />
+
+                            <RadioButton
+                                android:id="@+id/rd_grad2_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/grado2" />
+
+                            <RadioButton
+                                android:id="@+id/rd_grad3_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/grado3" />
+
+                        </RadioGroup>
+
+                        <CheckBox
+                            android:id="@+id/ch_pustulas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:onClick="validar_pustula"
+                            android:text="@string/Pustulas" />
+
+                        <RadioGroup
+                            android:id="@+id/grupo_pustulas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="15dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rd_dim1_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/dimension1" />
+
+                            <RadioButton
+                                android:id="@+id/rd_dim2_cab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:fontFamily="@font/vollkorn"
+                                android:text="@string/dimension2" />
+
+                        </RadioGroup>
+
+                        <CheckBox
+                            android:id="@+id/eritema"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:text="@string/Eritema" />
+
+                        <CheckBox
+                            android:id="@+id/sacudir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:text="@string/Sacudida" />
+
+                        <CheckBox
+                            android:id="@+id/cerumen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/vollkorn_bold"
+                            android:text="Cerumen en el oido " />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/top_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/azul_oscuro"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:onClick="menu"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="flecha_izquierda.json"
+                app:lottie_loop="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/vollkorn_semibold"
+                android:textColor="@color/white"
+                android:onClick="menu"
+                android:text="Volver al Menú" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:paddingRight="10dp"
+                android:onClick="Analizar"
+                android:fontFamily="@font/vollkorn_semibold"
+                android:textColor="@color/white"
+                android:text="Ir a Analizar" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:onClick="Analizar"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="flecha_derecha.json"
+                app:lottie_loop="true" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

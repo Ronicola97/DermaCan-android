@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="turquesa">#8ee3f5</color>
+    <color name="celeste">#C5FFFD</color>
+
+    <color name="azul_oscuro">#03256c</color>
+    <color name="azul_claro">#00a7e1</color>
+
+    <color name="icon_claro">#7AE7C7</color>
+    <color name="icon_oscuro">#1D2D44</color>
+
+    <color name="black">#00171f</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

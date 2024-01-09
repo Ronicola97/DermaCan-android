@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mascotas"
+    android:background="@drawable/not_bar_user_background"
+    android:screenOrientation="portrait">
+
+    <LinearLayout
+        android:id="@+id/top_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/azul_oscuro"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/vollkorn_bold"
+            android:text="Nueva Mascota"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="72dp"
+        android:layout_marginTop="60dp"
+        style="@style/MyVerticalScrollViewStyle"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/icon_top"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.51"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/login_borde_azul">
+
+                    <ImageView
+                        android:id="@+id/FotoPerro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/perfil_perro" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon_top">
+
+                <Button
+                    android:id="@+id/buscar_imagen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/vollkorn_semibold"
+                    android:background="@drawable/standar_button_background"
+                    android:onClick="seleccionarImagen"
+                    android:text="BUSCAR IMAGEN"
+                    app:layout_constraintStart_toEndOf="@+id/tomar_imagen"
+                    />
+
+                <Button
+                    android:id="@+id/tomar_imagen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/vollkorn_semibold"
+                    android:background="@drawable/standar_button_background"
+                    android:onClick="tomarFoto"
+                    android:text="TOMAR DE FOTO"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="4dp"
+
+                app:cardCornerRadius="15dp"
+                app:cardElevation="21dp"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_borde_azul"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TextInputNombreMascota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/icon_user">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/login_edit_text"
+                            android:digits="abcdefghijklmnñopqrstuvwxyz ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/black"
+                            android:fontFamily="@font/vollkorn"
+                            android:hint="Nombre de la mascota"
+                            android:inputType="textPersonName"
+                            android:paddingStart="10dp"
+                            android:textColorHint="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TextInputSexoMascota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/login_edit_text"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/vollkorn"
+                                android:gravity="center"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="20dp"
+                                android:text="Sexo:"
+                                android:textSize="18dp" />
+
+                            <RadioGroup
+                                android:id="@+id/sexomascota"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/sex_macho"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/vollkorn"
+                                    android:paddingEnd="20dp"
+                                    android:text="Macho" />
+
+                                <RadioButton
+                                    android:id="@+id/sex_hembra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:fontFamily="@font/vollkorn"
+                                    android:text="Hembra" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TextInputDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Sector"
+                        app:startIconDrawable="@drawable/icon_addres">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Direccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/login_edit_text"
+                            android:fontFamily="@font/vollkorn"
+                            android:inputType="textPersonName"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/cont_raza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/raza"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/login_edit_text"
+                            android:drawableTint="@color/black"
+                            android:ems="10"
+                            android:fontFamily="@font/vollkorn" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TextInputCalendario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/icon_calendario">
+
+                        <EditText
+                            android:id="@+id/edad"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/login_edit_text"
+                            android:clickable="true"
+
+                            android:drawablePadding="0dp"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:fontFamily="@font/vollkorn"
+                            android:hint="Fecha de nacimiento"
+                            android:inputType="textPersonName"
+                            android:onClick="verCalendario"
+                            android:paddingStart="10dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_register"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/standar_button_background"
+                        android:fontFamily="@font/vollkorn"
+                        android:onClick="Registrar_Mascota"
+                        android:text="@string/btn_registrar"
+                        android:textColor="@color/white"
+                        android:textSize="20sp">
+
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bot_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/azul_oscuro"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:onClick="mis_mascotas"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="flecha_izquierda.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/vollkorn_semibold"
+                android:gravity="center|left"
+                android:onClick="mis_mascotas"
+                android:paddingLeft="10dp"
+                android:text="Volver a Mis Mascotas"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
