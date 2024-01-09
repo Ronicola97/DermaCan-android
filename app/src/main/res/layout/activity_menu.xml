@@ -254,7 +254,8 @@
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
                         app:cardCornerRadius="20dp"
-                        app:cardElevation="21dp">
+                        app:cardElevation="21dp"
+                        android:onClick="veterinarias">
 
                         <LinearLayout
                             android:layout_width="match_parent"

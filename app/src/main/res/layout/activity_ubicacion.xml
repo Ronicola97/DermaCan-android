@@ -4,8 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ubicacion"
-    android:screenOrientation="portrait">
+    tools:context=".ubicacion">
 
+    <!-- AppBarLayout con Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/azul_oscuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="82dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="menu"
+                    app:srcCompat="@drawable/icon_map"
+                    android:background="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/view_UserName"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/vollkorn"
+                    android:padding="2dp"
+                    android:text="Veterinarias"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- NestedScrollView para el contenido -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="71dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        style="@style/MyVerticalScrollViewStyle">
+
+        <!-- ImageView para mostrar el mapa estático -->
+
+
+        <ImageView
+            android:id="@+id/imageViewMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- LinearLayout en la parte inferior -->
+    <LinearLayout
+        android:id="@+id/top_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/azul_oscuro"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="menu"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="flecha_izquierda.json"
+                app:lottie_loop="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textSize="14dp"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/vollkorn_semibold"
+                android:textColor="@color/white"
+                android:text="Volver al Menú" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

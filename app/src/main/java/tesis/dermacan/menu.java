@@ -60,4 +60,9 @@ public class menu extends AppCompatActivity {
         Intent i = new Intent(this, historial.class);
         startActivity(i);
     }
+
+    public void veterinarias(View v){
+        Intent i = new Intent(this, ubicacion.class);
+        startActivity(i);
+    }
 }
